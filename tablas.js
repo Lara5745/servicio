@@ -1,7 +1,13 @@
 var nr;
 nr = prompt('¿Qué tabla quieres visualizar?', '0');
 
-nr = parseInt(nr);
+if (isNaN(nr) ){
+  alert('Lo siento, solo puedes ingresar un número\nPrueba de nuevo');
+  location.reload();
+}else if (nr==null){
+  exit;
+}else{
+// nr = parseInt(nr);
 document.write("TABLA DEL "+nr);
 document.write("<hr>");
 document.write("<table style='margin: 0 auto;'>");
@@ -16,3 +22,4 @@ for (x = 1; x <= 10; x++) {
 }
 
 document.write("</table>");
+}
